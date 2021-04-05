@@ -14,7 +14,6 @@ async function addNewTask(req, res) {
             creator: req.body.creator,
         })
         task.duration.expires = req.body.duration+'m';
-        console.log(task.duration.expires);
         const savedTask = await task.save()
         res.json({
             msg: "Task Saved Succesfully",
