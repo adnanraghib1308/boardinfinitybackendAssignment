@@ -5,7 +5,7 @@ const addRouter = require('./routes/add')
 require('dotenv/config');
 
 const app = express()
-const PORT = 4000 || process.env.PORT
+const PORT = process.env.PORT || 4000
 
 mongoose.connect(
 	process.env.DB_URL, 
